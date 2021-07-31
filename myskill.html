@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Skills</title>
+	<link rel="stylesheet" type="text/css" href="myskill.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+</head>
+<body>
+	<div class="navigation">
+		<div class="h-btn" onclick="showNav()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="links">
+			<div class="link">
+				<a href="navigation.html">Home</a>
+			</div>
+			<div class="link">
+				<a href="myskill.html">Skills</a>
+			</div>
+			<div class="link">
+				<a href="project.html">Projects</a>
+			</div>
+			<div class="link">
+				<a href="about.html">About</a>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div class="card">
+			<div class="circle">
+				<div class="bar"></div>
+					<div class="box"><span></span></div>
+			</div>
+			<div class="text">PHP</div>
+		</div>
+		<div class="card js">
+			<div class="circle">
+				<div class="bar"></div>
+					<div class="box"><span></span></div>
+			</div>
+			<div class="text">JS</div>
+		</div>
+		<div class="card css">
+			<div class="circle">
+				<div class="bar"></div>
+					<div class="box"><span></span></div>
+			</div>
+			<div class="text">CSS</div>
+		</div>
+		<div class="card html">
+			<div class="circle">
+				<div class="bar"></div>
+					<div class="box"><span></span></div>
+			</div>
+			<div class="text">HTML</div>
+		</div>
+	</div>
+
+	<script>
+		let options = {
+			startAngle: -1.55,
+			size: 150,
+			value:0.40,
+			fill:{color: "black"}
+		}
+		$(".circle .bar").circleProgress(options).on("circle-animation-progress",
+			function(event, progress, stepValue){
+				$(this).parent().find("span").text(String(stepValue.toFixed(2).substr(2)+ "%"))
+			});
+		$(".js .bar").circleProgress({
+			value:0.60,
+		});
+		$(".css .bar").circleProgress({
+			value:0.80,
+		});
+		$(".html .bar").circleProgress({
+			value:0.90,
+		});
+	</script>
+	<script type="text/javascript">
+		function showNav(){
+			document.getElementsByClassName("navigation")[0].classList.toggle("active");
+		}
+	</script>
+</body>
+</html>

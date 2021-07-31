@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Skills</title>
+	<link rel="stylesheet" type="text/css" href="skillbar.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+<body>
+<!-- Nav -->
+<div class="navigation">
+		<div class="h-btn" onclick="showNav()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+		<div class="links">
+			<div class="link">
+				<a href="navigation.html">Home</a>
+			</div>
+			<div class="link">
+				<a href="skillbar.html">Skills</a>
+			</div>
+			<div class="link">
+				<a href="project.html">Projects</a>
+			</div>
+			<div class="link">
+				<a href="about.html">About Me</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- Conta -->
+
+	<div class="container">
+		<center><h2>My Learning Skills</h2></center>
+		<div class="skills">
+			<span class="Name">Html</span>
+			<div class="percent">
+				<div class="progress" style="width: 85%;"></div>
+			</div>
+			<span class="Value">85%</span>
+		</div>
+		<div class="skills">
+			<span class="Name">CSS</span>
+			<div class="percent">
+				<div class="progress" style="80%"></div>
+			</div>
+			<span class="Value">80%</span>
+		</div>
+		<div class="skills">
+			<span class="Name">Javascript</span>
+			<div class="percent">
+				<div class="progress" style="width:60% "></div>
+			</div>
+			<span class="Value">60%</span>
+		</div>
+		<div class="skills">
+			<span class="Name">Php</span>
+			<div class="percent">
+				<div class="progress" style="width: 40%"></div>
+			</div>
+			<span class="Value">40%</span>
+		</div>
+		<div class="skills">
+			<span class="Name">Java</span>
+			<div class="percent">
+				<div class="progress" style="width: 55%"></div>
+			</div>
+			<span class="Value">55%</span>
+		</div>
+	</div>
+
+<!-- nav script -->
+<script type="text/javascript">
+		function showNav(){
+			document.getElementsByClassName("navigation")[0].classList.toggle("active");
+		}
+	</script>
+</body>
+</html>

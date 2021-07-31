@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Responsive Slider Menu</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<link rel="stylesheet" type="text/css" href="navigation.css">
+</head>
+<body>
+<div class="navigation">
+	<ul>
+		<li>
+			<a href="navigation.html">
+				<span class="icon"><i class="fa fa-home" aria-hidden="true"></i></span>
+				<span class="title">Home</span>
+			</a>
+		</li>
+		<li>
+			<a href="skillbar.html">
+				<span class="icon"><i class="fa fa-rocket" aria-hidden="true"></i></span>
+				<span class="title">Skills</span>
+			</a>
+		</li>
+		<li>
+			<a href="project.html">
+				<span class="icon"><i class="fa fa-android" aria-hidden="true"></i></span>
+				<span class="title">Projects</span>
+			</a>
+		</li>
+		<li>
+			<a href="about.html">
+				<span class="icon"><i class="fa fa-user" aria-hidden="true"></i></span>
+				<span class="title">About</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="icon"><i class="fa fa-sign-in" aria-hidden="true"></i></span>
+				<span class="title">Login In</span>
+			</a>
+		</li>
+		<li>
+			<a href="#">
+				<span class="icon"><i class="fa fa-sign-out" aria-hidden="true"></i></span>
+				<span class="title">Login Out</span>
+			</a>
+		</li>
+	</ul>
+	
+</div>
+<div class="toggle" onclick="toggleMenu()"></div>
+<div class="about">
+
+		<h1>Hello EveryBody</h1>
+		<h2>I'm Si Thu Aung...</h2>
+		<h3>Beginner of Web Programmer</h3>
+	</div>
+	<div class="img">
+		<img src="me.jpg" width="100%">
+		
+	</div>
+<script type="text/javascript">
+	function toggleMenu(){
+		let navigation = document.querySelector('.navigation');
+		let toggle = document.querySelector('.toggle');
+		navigation.classList.toggle('active');
+		toggle.classList.toggle('active');
+	}
+</script>
+
+</body>
+</html>

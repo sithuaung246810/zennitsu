@@ -1,0 +1,185 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppin',sans-serif;
+}
+body
+{
+	display: flex;
+	align-items: center;
+	justify-content:center;
+	min-height: 100vh;
+	padding: 20px;
+	background: cyan;
+
+}
+.wrapper{
+	width: 800px;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.wrapper .card{
+	width: calc(33% -20px);
+	background: #fff;
+	height: 300px;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: space-evenly;
+	flex-direction: column;
+	
+}
+.wrapper .card .circle{
+	position: relative;
+	height: 150px;
+	width: 150px;
+	border-radius: 50%;
+	cursor: default;
+}
+.card .circle .box,
+.card .circle .box span{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transition: all 0.1s;
+}
+.card .circle .box{
+	height: 100%;
+	width: 100%;
+	background: #fff;
+	transform: translate(-50%, -50%) scale(0.8);
+	border-radius: 50%;
+	transition: all 0.2s;
+}
+.card .circle:hover .box{
+	transform: translate(-50%, -50%) scale(0.91);
+}
+.card .circle .box span,
+.wrapper .card .text{
+	/*background: -webkit-linear-gradient(left, #a445b2 , #fa4299);*/
+	background: black;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color:transparent;
+}
+.card .circle .box span{
+	font-size: 38px;
+	font-weight: 600;
+	font-family: sans-serif;
+	transform: translate(-45%, -50%);
+	transition: all 0.1s;
+}
+.card .circle:hover .box span{
+	transform: translate(-45%, -50%) scale(1.09);
+}
+.card .text{
+	font-size: 20px;
+	font-weight: 600;
+}
+@media(max-width: 753px){
+	.wrapper{
+		width: 700px;
+	}
+	.wrapper .card{
+		width: calc(50% -20px);
+		margin-bottom: 20px;
+
+	}
+}
+@media(max-width: 505px){
+	.wrapper{
+		width: 500px;
+	}
+	.wrapper .card{
+		width: 100%;
+	}
+
+}
+.navigation
+{
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: #111;
+	z-index: 200;
+	clip-path: circle(25px at calc(100% - 45px)45px);
+	transition: all 300ms ease-in-out;
+}
+.navigation.active{
+	clip-path: circle(75%);
+}
+.navigation .h-btn{
+	position: absolute;
+	top: 20px;
+	right:20px;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.navigation .h-btn span
+{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	width: 50%;
+	height: 2px;
+	background: #f5f5f5;
+	transition: all 200ms ease-in-out;
+}
+.navigation .h-btn span:nth-child(1){
+	top: 30%;
+}
+.navigation .h-btn span:nth-child(2){
+	top: 50%;
+}
+.navigation .h-btn span:nth-child(3){
+	top: 70%;
+}
+
+.navigation.active .h-btn span:nth-child(1){
+	top: 50%;
+	transform: translate(-50%,-50%) rotate(45deg);
+}
+.navigation.active .h-btn span:nth-child(2){
+	display: none;
+}
+.navigation.active .h-btn span:nth-child(3){
+	top: 50%;
+	transform: translate(-50%,-50%) rotate(-45deg);
+}
+.navigation .links{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	text-align: center;
+}
+.navigation .links a{
+	position: relative;
+	display: inline-block;
+	margin: 20px 0px;
+	font-size: 30px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #f5f5f5;
+	text-transform: uppercase;
+	letter-spacing: 5px;
+}
+.navigation .links a:after{
+	content: "";
+	position: absolute;
+	left: 0px;
+	bottom: -5px;
+	height: 2px;
+	width: l0%;
+	background: tomato;
+	transition: all 300ms ease-in-out;
+}
+.navigation .links a:hover:after{
+	width: 100%;
+}
